@@ -11,49 +11,49 @@
 	<title>PUSHSrv - Dashboard</title>
 
 	<!-- Bootstrap -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="<?php echo ROOT_URL ?>admin/css/bootstrap.min.css">
 	<!-- Bootstrap responsive -->
-	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" href="<?php echo ROOT_URL ?>admin/css/bootstrap-responsive.min.css">
 	<!-- Theme CSS -->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="<?php echo ROOT_URL ?>admin/css/style.css">
 	<!-- Color CSS -->
-	<link rel="stylesheet" href="css/themes.css">
+	<link rel="stylesheet" href="<?php echo ROOT_URL ?>admin/css/themes.css">
 	<!-- Easy pie  -->
-	<link rel="stylesheet" href="css/plugins/easy-pie-chart/jquery.easy-pie-chart.css">
+	<link rel="stylesheet" href="<?php echo ROOT_URL ?>admin/css/plugins/easy-pie-chart/jquery.easy-pie-chart.css">
 
 	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
+	<script src="<?php echo ROOT_URL ?>admin/js/jquery.min.js"></script>
 	
 		<!-- jQuery UI -->
-	<script src="js/plugins/jquery-ui/jquery.ui.core.min.js"></script>
-	<script src="js/plugins/jquery-ui/jquery.ui.widget.min.js"></script>
-	<script src="js/plugins/jquery-ui/jquery.ui.mouse.min.js"></script>
-	<script src="js/plugins/jquery-ui/jquery.ui.draggable.min.js"></script>
-	<script src="js/plugins/jquery-ui/jquery.ui.resizable.min.js"></script>
-	<script src="js/plugins/jquery-ui/jquery.ui.sortable.min.js"></script>
+	<script src="<?php echo ROOT_URL ?>admin/js/plugins/jquery-ui/jquery.ui.core.min.js"></script>
+	<script src="<?php echo ROOT_URL ?>admin/js/plugins/jquery-ui/jquery.ui.widget.min.js"></script>
+	<script src="<?php echo ROOT_URL ?>admin/js/plugins/jquery-ui/jquery.ui.mouse.min.js"></script>
+	<script src="<?php echo ROOT_URL ?>admin/js/plugins/jquery-ui/jquery.ui.draggable.min.js"></script>
+	<script src="<?php echo ROOT_URL ?>admin/js/plugins/jquery-ui/jquery.ui.resizable.min.js"></script>
+	<script src="<?php echo ROOT_URL ?>admin/js/plugins/jquery-ui/jquery.ui.sortable.min.js"></script>
 	<!-- Touch enable for jquery UI -->
-	<script src="js/plugins/touch-punch/jquery.touch-punch.min.js"></script>
+	<script src="<?php echo ROOT_URL ?>admin/js/plugins/touch-punch/jquery.touch-punch.min.js"></script>
 	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="<?php echo ROOT_URL ?>admin/js/bootstrap.min.js"></script>
 	<!-- Bootbox -->
-	<script src="js/plugins/bootbox/jquery.bootbox.js"></script>
+	<script src="<?php echo ROOT_URL ?>admin/js/plugins/bootbox/jquery.bootbox.js"></script>
 	<!-- Flot -->
-	<script src="js/plugins/flot/jquery.flot.min.js"></script>
-	<script src="js/plugins/flot/jquery.flot.bar.order.min.js"></script>
-	<script src="js/plugins/flot/jquery.flot.pie.min.js"></script>
-	<script src="js/plugins/flot/jquery.flot.resize.min.js"></script>
+	<script src="<?php echo ROOT_URL ?>admin/js/plugins/flot/jquery.flot.min.js"></script>
+	<script src="<?php echo ROOT_URL ?>admin/js/plugins/flot/jquery.flot.bar.order.min.js"></script>
+	<script src="<?php echo ROOT_URL ?>admin/js/plugins/flot/jquery.flot.pie.min.js"></script>
+	<script src="<?php echo ROOT_URL ?>admin/js/plugins/flot/jquery.flot.resize.min.js"></script>
 	<!-- icheck -->
-	<script src="js/plugins/icheck/jquery.icheck.min.js"></script>
+	<script src="<?php echo ROOT_URL ?>admin/js/plugins/icheck/jquery.icheck.min.js"></script>
 	<!-- Easy pie -->
-	<script src="js/plugins/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+	<script src="<?php echo ROOT_URL ?>admin/js/plugins/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
 
 
 	<!-- Theme framework -->
-	<script src="js/eakroko.min.js"></script>
+	<script src="<?php echo ROOT_URL ?>admin/js/eakroko.min.js"></script>
 	<!-- Theme scripts -->
-	<script src="js/application.js"></script>
+	<script src="<?php echo ROOT_URL ?>admin/js/application.js"></script>
 	<!-- Just for demonstration -->
-	<script src="js/demonstration.js"></script>
+	<script src="<?php echo ROOT_URL ?>admin/js/demonstration.js"></script>
 	
 	<!--[if lte IE 9]>
 		<script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
@@ -65,9 +65,9 @@
 	<![endif]-->
 
 	<!-- Favicon -->
-	<link rel="shortcut icon" href="img/favicon.ico" />
+	<link rel="shortcut icon" href="<?php echo ROOT_URL ?>img/favicon.ico" />
 	<!-- Apple devices Homescreen icon -->
-	<link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon-precomposed" href="<?php echo ROOT_URL ?>img/apple-touch-icon-precomposed.png" />
 
 </head>
 
@@ -79,13 +79,21 @@
 
 			<div class="user">
 
-				<div class="dropdown">
-					<a href="index.php"><i class="icon-signout"></i> Sign out</a>
-				</div>
+				<?php if(!defined("INSTALLMODE")) { ?>
+				
+					<div class="dropdown">
+						<a href="index.php"><i class="icon-signout"></i> Sign out</a>
+					</div>
+				
+				<?php } ?>
+				
 			</div>
 		</div>
 	</div>
 	<div class="container-fluid" id="content">
+	
+		<?php if(!defined("INSTALLMODE")) { ?>
+		
 		<div id="left">
 			<div class="subnav">
 	
@@ -94,16 +102,16 @@
 				</div>
 				<ul class="subnav-menu">
 					<li>
-						<a href="dashboard.php">Dashboard</a>
+						<a href="<?php echo ROOT_URL ?>dashboard.php">Dashboard</a>
 					</li>
 					<li>
-						<a href="send.php">Send Notification</a>
+						<a href="<?php echo ROOT_URL ?>send.php">Send Notification</a>
 					</li>
 					<li>
-						<a href="queue.php">Queue</a>
+						<a href="<?php echo ROOT_URL ?>queue.php">Queue</a>
 					</li>
 					<li>
-						<a href="settings.php">Settings</a>
+						<a href="<?php echo ROOT_URL ?>settings.php">Settings</a>
 					</li>
 				</ul>
 
@@ -124,4 +132,7 @@
 				</ul>
 			</div>
 		</div>
+		
+		<?php } ?>
+		
 		<div id="main">
