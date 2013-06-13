@@ -4,10 +4,10 @@
 	// Database settings
 	/////////////////////////////////////////////////////////////////////////////////////
 
-	define("DB_HOST",""); // change this
-	define("DB_NAME",""); // change this
-	define("DB_USER",""); // change this
-	define("DB_PASS",""); // change this
+	define("DB_HOST","localhost");
+	define("DB_NAME","pushserver");
+	define("DB_USER","root");
+	define("DB_PASS","cloverpass013");
 	
 	/////////////////////////////////////////////////////////////////////////////////////
 	// Debug settings
@@ -22,9 +22,9 @@
 	// Pushnotification settings
 	/////////////////////////////////////////////////////////////////////////////////////
 
-	define('GCM_API_KEY',""); // change this
-	define('APN_DEV_CERT',""); // change this
-	define('APN_PROD_CERT',""); // change this
+	define('GCM_API_KEY',"AIzaSyCknraLIdewMkouAnb-VyjsfnStHWqP8wI");
+	define('APN_DEV_CERT',"/var/www/projects/push_server/lib/apns-dev.pem");
+	define('APN_PROD_CERT',"/var/www/projects/push_server/lib/apns-prod.pem");
 	
 	/////////////////////////////////////////////////////////////////////////////////////
 	// QUEUE settings
@@ -39,7 +39,7 @@
 	/////////////////////////////////////////////////////////////////////////////////////
 
 	define('PHP_COMMAND',"php"); // apsolute path for php command
-	define('ROOT_URL',''); // change this
+	define('ROOT_URL','http://local.clover-studio.com/projects/push_server/');
 	define('SP_TIMEOUT',20); // sec
 	
 	/////////////////////////////////////////////////////////////////////////////////////
@@ -47,7 +47,7 @@
 	/////////////////////////////////////////////////////////////////////////////////////
 
 	define('SHOW_SERVERSTAT',true); 
-	define('ADMIN_USERNAME',"admin"); // change this
-	define('ADMIN_PASSWORD',"password"); // change this
+	define('ADMIN_USERNAME',"admin");
+	define('ADMIN_PASSWORD',"password");
 	
 ?>
