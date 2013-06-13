@@ -2,7 +2,8 @@
 	
 	include("../lib/startup.php");
 	session_start();
-	$_SESSION['logged_id'] = false;
+	
+	unset($_SESSION['logged_id']);
 	
 	$additionalFormClass = "";
 

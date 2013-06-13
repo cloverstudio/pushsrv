@@ -1,7 +1,15 @@
 <?php
 	include('../lib/startup.php');
+	
+	session_start();	
+	if(!isset($_SESSION['logged_id'])){
+		header("Location: index.php");
+		die();
+	}
+
 	include('header.php'); 
 	
+
 	$DB = connectToDB();
 	
 	$result = executeQuery($DB,"select count(*) as count from queue where state = " . STATE_SUCCESS);

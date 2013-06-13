@@ -81,8 +81,8 @@
 
 				<?php if(!defined("INSTALLMODE")) { ?>
 				
-					<div class="dropdown">
-						<a href="index.php"><i class="icon-signout"></i> Sign out</a>
+					<div class="dropdown"> 
+						<a href="index.php?logout=logout"><i class="icon-signout"></i> Sign out</a>
 					</div>
 				
 				<?php } ?>
@@ -102,16 +102,16 @@
 				</div>
 				<ul class="subnav-menu">
 					<li>
-						<a href="<?php echo ROOT_URL ?>dashboard.php">Dashboard</a>
+						<a href="<?php echo ROOT_URL ?>admin/dashboard.php">Dashboard</a>
 					</li>
 					<li>
-						<a href="<?php echo ROOT_URL ?>send.php">Send Notification</a>
+						<a href="<?php echo ROOT_URL ?>admin/send.php">Send Notification</a>
 					</li>
 					<li>
-						<a href="<?php echo ROOT_URL ?>queue.php">Queue</a>
+						<a href="<?php echo ROOT_URL ?>admin/queue.php">Queue</a>
 					</li>
 					<li>
-						<a href="<?php echo ROOT_URL ?>settings.php">Settings</a>
+						<a href="<?php echo ROOT_URL ?>admin/settings.php">Settings</a>
 					</li>
 				</ul>
 
