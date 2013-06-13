@@ -1,2 +1,2 @@
-./lib/init.php
-./tmp
+lib/init.php
+tmp/*
