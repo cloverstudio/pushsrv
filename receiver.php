@@ -1,5 +1,6 @@
 <?php
 	
+	//test
 	include("./lib/startup.php");
 	
 	$_POST = stripBackSlash($_POST);
